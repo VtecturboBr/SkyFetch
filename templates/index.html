@@ -8,7 +8,6 @@
     <title>SkyFetch — Encontre voos com uma frase</title>
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <script src="{{ url_for('static', filename='js/search.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
   </head>
   <body>
@@ -69,7 +68,7 @@
             <span class="demo-badge"><span class="demo-dot" aria-hidden="true"></span> Dados de exemplo</span>
           </div>
           <p id="search-summary" class="search-summary" aria-live="polite"></p>
-          <div id="results-list" class="results-list" aria-live="polite" aria-relevant="all"></div>
+          <div id="results-list" class="results-list" aria-live="polite" aria-relevant="all" aria-busy="false"></div>
           <div class="results-footer"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg> Informações fictícias para demonstração. Não representam voos reais.</div>
         </div>
 

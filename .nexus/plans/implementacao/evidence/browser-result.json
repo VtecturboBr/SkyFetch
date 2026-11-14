@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "engine": "157.0.8103.78",
+  "widths": [
+    1280,
+    768,
+    390
+  ],
+  "uncaughtErrors": [],
+  "checks": [
+    "PostgreSQL ponta a ponta",
+    "teclado",
+    "chips",
+    "URL/refresh/vazio",
+    "XSS",
+    "loading",
+    "503/500/JSON/offline/retry",
+    "respostas fora de ordem",
+    "reduced motion",
+    "sem overflow"
+  ]
+}
