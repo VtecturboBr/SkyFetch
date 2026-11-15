@@ -43,8 +43,9 @@ async function main() {
     }
     await search('voos');
     const colors = await page.evaluate(() => ['.meta-label', '.results-footer', '.dataset-note', '.footer-inner', '#search-input'].map((selector) => {
-      return getComputedStyle(document.querySelector(selector), selector === '#search-input' ? '::placeholder' : null).color;
-    }));
+      const el = document.querySelector(selector);
+      return el ? getComputedStyle(el, selector === '#search-input' ? '::placeholder' : null).color : null;
+    }).filter(Boolean));
     for (const color of colors) {
       const linear = color.match(/[\d.]+/g).slice(0, 3).map(Number).map((v) => {
         v /= 255; return v <= .04045 ? v/12.92 : ((v+.055)/1.055)**2.4;

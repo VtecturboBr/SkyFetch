@@ -20,7 +20,7 @@ Set-Location 'C:\Users\peter\Downloads\SkyFetch-dev'
 .\scripts\postgres.ps1 start
 python scripts/setup_database.py
 python scripts/setup_database.py --test
-python -B scripts/check_environment.py
+python -B opcional/scripts/check_environment.py
 python app.py
 ```
 
@@ -103,7 +103,7 @@ No banco `skyfetch_test`, revogue também `CREATE ON SCHEMA public FROM PUBLIC`;
 
 ```powershell
 . .\scripts\activate.ps1
-python -B scripts/check_environment.py
+python -B opcional/scripts/check_environment.py
 python -m pip check
 node --test tests/app.test.cjs
 python -m pytest -q
@@ -115,6 +115,6 @@ A API `/api/search?q=voos` responde 200 com cinco combinações no seed inicial.
 
 ## Planejamento revisado
 
-Os arquivos de referência estão em `docs/planning/`. O mestre v1.2 e seu prompt distinguem instalação, leitura e testes. A gramática agora representa uma ligação opcional após a introdução (`voos da latam`) e uma ligação entre termos (`latam em Belém`), com rejeição de ligações soltas, repetidas ou após operadores. A auditoria v1.1 foi copiada sem alterar seu histórico.
+Os arquivos de referência estão em `opcional/docs/planning/`. O mestre v1.2 e seu prompt distinguem instalação, leitura e testes. A gramática agora representa uma ligação opcional após a introdução (`voos da latam`) e uma ligação entre termos (`latam em Belém`), com rejeição de ligações soltas, repetidas ou após operadores. A auditoria v1.1 foi copiada sem alterar seu histórico.
 
-As etapas 4 e 5 foram autorizadas posteriormente e implementadas. Commit, push, PR, merge e deploy não fazem parte desta autorização. O estado atual e as evidências estão em `.nexus/plans/implementacao/`.
+As etapas 4 e 5 foram autorizadas posteriormente e implementadas. Commit, push, PR, merge e deploy não fazem parte desta autorização. O estado atual e as evidências estão em `opcional/.nexus/plans/implementacao/`.

@@ -93,6 +93,7 @@ h2 { font-size: 25px; letter-spacing: -.9px; margin: 0; line-height: 1.25; }
 .operator-except { background: #fff0e7; color: #ab6033; }
 .sample-card h3 { margin: 0 0 20px; }
 .stat-line { display: flex; align-items: center; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.stat-line:last-child { border-bottom: 0; }
 .stat-line strong { font-size: 16px; color: var(--navy-mid); font-variant-numeric: tabular-nums; }
 .dataset-note { font-size: 11px; line-height: 1.65; color: #637587; margin: 16px 0 0; }
 .empty-state { text-align: center; padding: 36px 18px 49px; }

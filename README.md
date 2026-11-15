@@ -67,13 +67,13 @@ URLs com `q` repetido são rejeitadas também pela página, sem descartar valore
 python scripts/setup_database.py --test
 python -m pytest -q
 node --test tests/app.test.cjs
-python -B scripts/check_environment.py
+python -B opcional/scripts/check_environment.py
 python -m pip check
 ```
 
 Integração usa exclusivamente `TEST_DATABASE_URL`, em banco com nome terminado em `_test`, diferente do desenvolvimento. A suíte aplica schema/seed nesse banco e reverte as alterações dos testes de casos extremos. Sem a variável explícita, testes de integração são marcados como não executados; isso não comprova o funcionamento do PostgreSQL.
 
-O smoke opcional em navegador real está em `scripts/browser_smoke.cjs`. Instruções e capturas desktop/tablet/mobile: [Verificação da implementação](.nexus/plans/implementacao/progress.md).
+O smoke opcional em navegador real está em `opcional/scripts/browser_smoke.cjs`. Instruções e capturas desktop/tablet/mobile: [Verificação da implementação](opcional/.nexus/plans/implementacao/progress.md).
 
 ## Estrutura
 
@@ -88,4 +88,4 @@ templates/, static/css/     interface existente preservada
 tests/                      parser, API, PostgreSQL real e UI assíncrona
 ```
 
-Planejamento: [mestre v1.2](docs/planning/SKYFETCH_PLANO_MESTRE_REVISADO_v1.2.md). O método NEXUS e a auditoria fornecida são documentos de referência, não dependências da aplicação nem evidência de testes executados.
+Planejamento: [mestre v1.2](opcional/docs/planning/SKYFETCH_PLANO_MESTRE_REVISADO_v1.2.md). O método NEXUS e a auditoria fornecida são documentos de referência, não dependências da aplicação nem evidência de testes executados.
